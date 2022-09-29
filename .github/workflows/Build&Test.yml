@@ -103,3 +103,8 @@ jobs:
           cmake --build . --config RelWithDebInfo
           ctest -C RelWithDebInfo
           endlocal
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v3.1.0
+      with:
+          name: build
+          path: build
